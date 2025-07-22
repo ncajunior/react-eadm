@@ -1,0 +1,65 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 20px;
+  color: white;
+}
+
+/* Estilos para o ícone customizado do marcador */
+.custom-div-icon {
+  background: transparent !important;
+  border: none !important;
+}
+
+/* Estilos para popups do Leaflet */
+.leaflet-popup-content-wrapper {
+  padding: 0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.15) !important;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.leaflet-popup-tip {
+  background: white !important;
+  box-shadow: 0 3px 14px rgba(0,0,0,0.1) !important;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .leaflet-popup-content-wrapper {
+    max-width: 280px !important;
+  }
+}
+
+/* Animações suaves */
+.leaflet-marker-icon {
+  transition: all 0.3s ease !important;
+}
+
+.leaflet-marker-icon:hover {
+  transform: scale(1.1) !important;
+  z-index: 1000 !important;
+}
+
+/* Estilo para o container do mapa */
+.leaflet-container {
+  font-family: 'Roboto', Arial, sans-serif !important;
+}
+
+/* Controles do mapa */
+.leaflet-control-zoom a {
+  border-radius: 50% !important;
+  margin: 2px !important;
+}
+
+.leaflet-control-attribution {
+  font-size: 10px !important;
+  background: rgba(255, 255, 255, 0.8) !important;
+}
