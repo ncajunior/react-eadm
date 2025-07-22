@@ -1,55 +1,127 @@
-plicação React EADM - CCPatrimonial
-🏗️ Arquitetura Criada:
-package.json - Configuração com todas as dependências necessárias:
+# Mapa EADM - Estrutura Administrativa Municipal
 
-React 18.2.0
-Material-UI 5.14.0
-React-Leaflet 4.2.1
-Leaflet 1.9.4
-public/index.html - HTML base com:
+Este projeto apresenta um mapa interativo da estrutura administrativa da Prefeitura de Águia Branca - ES, com popups em Material Design.
 
-Meta tags otimizadas
-Google Fonts (Roboto + Material Icons)
-Leaflet CSS
-src/App.js - Componente principal com:
+## 📋 Características
 
-Header CCPatrimonial com logo hexagonal
-Mapa interativo usando React-Leaflet
-59 pontos do GeoJSON original
-Popups Material Design com informações detalhadas
-src/App.css - Estilos customizados para:
+- **Interface Material Design**: Popups modernos e elegantes seguindo as diretrizes do Google Material Design
+- **Mapa Interativo**: Visualização de todos os pontos da estrutura administrativa municipal
+- **Layers Organizadas**: Pontos agrupados por secretaria com cores distintas
+- **Tooltips Informativos**: Informações rápidas ao passar o mouse sobre os marcadores
+- **Design Responsivo**: Funciona perfeitamente em desktop, tablet e mobile
+- **Indicador de Carregamento**: Feedback visual durante o carregamento dos dados
+- **Tratamento de Erros**: Mensagens claras em caso de problemas
 
-Marcadores animados
-Popups responsivos
-Controles do mapa
-src/index.css - Estilos globais com:
+## 🚀 Como usar
 
-Reset CSS
-Fontes Roboto
-Scrollbar personalizada
-🎨 Funcionalidades Implementadas:
-✅ Material Design: Tema customizado com cores da CCPatrimonial
-✅ Mapa Interativo: Leaflet com todos os 59 pontos administrativos
-✅ Popups Inteligentes:
-Chips coloridos por secretaria
-Ícones dinâmicos por tipo de departamento
-Informações hierárquicas (código, descrição, departamento)
-Estatísticas (quantidade de departamentos/locais)
-✅ Header Profissional: Logo hexagonal da CCPatrimonial
-✅ Responsivo: Design adaptável para mobile
-✅ Animações: Hover effects e transições suaves
-🎯 Tipos de Marcadores por Categoria:
-🏫 Escolas (EMEF, CMEI, EMCA, EMEIEF)
-🏥 Saúde
-🚓 Delegacia
-⛪ Capela
-🎭 Cultura
-⚽ Esportes
-💼 Empreendedorismo
-🤝 Assistência Social
-🔧 Garagem/Oficina
-🏢 Administração geral
-🚀 Para Executar:
-O projeto está pronto para ser executado. As dependências foram instaladas e o código está livre de erros. Para iniciar:
+1. **Abra o arquivo `index.html` em um navegador web**
+   - O arquivo funciona diretamente no navegador (não requer servidor web)
+   - Os dados GeoJSON estão incorporados no HTML para evitar problemas de CORS
 
-A aplicação abrirá em http://localhost:3000 com um mapa moderno e profissional, mantendo toda a funcionalidade da versão vanilla mas agora em uma arquitetura React moderna e escalável! 🎉
+2. **Navegue pelo mapa:**
+   - Clique nos marcadores para ver informações detalhadas
+   - Use os controles de layer no canto superior direito para filtrar por secretaria
+   - Passe o mouse sobre os marcadores para ver tooltips rápidos
+
+## 🔧 Resolução de Problemas
+
+### Problema de CORS
+**Solucionado**: Os dados GeoJSON foram incorporados diretamente no HTML, eliminando a necessidade de carregar arquivos externos e evitando problemas de CORS.
+
+## 🎨 Recursos do Popup
+
+Cada popup contém:
+
+- **Cabeçalho com gradiente**: Nome e código do departamento
+- **Informações organizacionais**: Secretaria e departamento
+- **Imagem (quando disponível)**: Foto do local ou equipamento
+- **Estatísticas**: Número de departamentos, locais e funcionários
+- **Animações suaves**: Transições e efeitos visuais
+
+## 🎨 Cores por Secretaria
+
+- 🔴 **Prefeitura Municipal**: Vermelho (#f44336)
+- 🌸 **Gabinete do Prefeito**: Rosa (#e91e63)
+- 🟣 **Administração**: Roxo (#9c27b0)
+- 🟪 **Assistência Social**: Roxo Escuro (#673ab7)
+- 🔵 **Desenvolvimento Rural**: Azul Escuro (#3f51b5)
+- 🔷 **Educação, Cultura, Esportes e Lazer**: Azul (#2196f3)
+- 🔵 **Finanças**: Azul Claro (#03a9f4)
+- 🟢 **Meio Ambiente**: Verde (#4caf50)
+- 🟠 **Obras e Serviços Urbanos**: Laranja (#ff9800)
+- 🔴 **Saúde**: Vermelho (#f44336)
+- 🟤 **UG F.M. Saúde**: Marrom (#795548)
+
+## 📱 Recursos Responsivos
+
+- **Desktop**: Layout completo com sidebar de layers expandida
+- **Tablet**: Ajustes de tamanho e espaçamento
+- **Mobile**: Popups otimizados e controles adaptados
+
+## 🛠️ Tecnologias Utilizadas
+
+- **Leaflet.js**: Biblioteca para mapas interativos
+- **Material Design Components**: Framework de design do Google
+- **OpenStreetMap**: Tiles de mapa gratuitos
+- **CSS3**: Animações e efeitos visuais
+- **JavaScript ES6+**: Funcionalidades modernas
+
+## 📊 Dados
+
+O arquivo `EADMTERMO.geojson` contém 59 pontos representando:
+- Prefeitura e secretarias
+- Escolas e unidades de saúde
+- Departamentos e órgãos municipais
+- Equipamentos públicos
+
+Cada ponto inclui:
+- Coordenadas geográficas
+- Código identificador
+- Descrição completa
+- Secretaria responsável
+- Departamento
+- Imagem (quando disponível)
+- Estatísticas de estrutura
+
+## 🎯 Funcionalidades Avançadas
+
+### Interatividade
+- **Hover Effects**: Marcadores aumentam ao passar o mouse
+- **Tooltips**: Informações rápidas sem abrir popup
+- **Animações**: Transições suaves em todos os elementos
+
+### Visual
+- **Gradientes**: Efeitos visuais modernos
+- **Shadows**: Profundidade e hierarquia visual
+- **Icons**: Ícones Material Design contextuais
+
+### Usabilidade
+- **Loading States**: Indicadores de carregamento
+- **Error Handling**: Tratamento de erros com retry
+- **Accessibility**: Foco e navegação por teclado
+
+## 🔧 Personalização
+
+Para personalizar o projeto:
+
+1. **Cores**: Edite as variáveis CSS em `material-styles.css`
+2. **Ícones**: Substitua os ícones Material Design no HTML
+3. **Dados**: Substitua o arquivo GeoJSON por seus próprios dados
+4. **Estilos**: Modifique os estilos CSS conforme necessário
+
+## 📞 Suporte
+
+Se encontrar problemas:
+
+1. Verifique se todos os arquivos estão na mesma pasta
+2. Certifique-se de que está acessando via servidor web (não file://)
+3. Verifique o console do navegador para erros
+4. Confirme que o arquivo GeoJSON está válido
+
+## 📄 Licença
+
+Este projeto é de uso livre para fins educacionais e governamentais.
+
+---
+
+Desenvolvido com ❤️ usando Material Design e tecnologias web modernas.
